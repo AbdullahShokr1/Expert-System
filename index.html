@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta name='descreption' content=''>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Log In-Expert System</title>
+		<link rel='stylesheet' href='css/stylea.css' type='text/css' >
+	</head>
+	<body>
+		<div class='logBox'>
+			<h2>Log In</h2>
+			<form id="myformlog"  name="myFormlog" onsubmit="return validateFormlogin()" method="post" action="Pages/FQA.html">
+				<p>Name</p>
+				<input type='text' name='username' placeholder='Enter Name'>
+				<p>Age</p>
+				<input type='text' name='age' placeholder='Enter Your Age'>
+				<input type='submit' name='' value='Log In'>
+			</form>
+		</div>
+		<canvas id="binarybackground"></canvas>
+		<script>
+			var c =document.getElementById("binarybackground");
+			var	cx=c.getContext("2d");
+
+			c.height=window.innerHeight;
+			c.width=window.innerWidth;
+			var binary ="01";
+			binary = binary.split("");
+			var font_size=20;
+			var	columns = c.width/font_size;
+			var	drops = [] ;
+
+			for (var x=0 ; x < columns ; x++)
+			drops[x]=1;
+			function draw()
+			{
+				  cx.fillStyle="rgba(0,0,0,0.05)";
+				  cx.fillRect(0,0, c.width, c.height);
+				  cx.fillStyle="#10fa07";
+				  cx.font=font_size + "px arial";
+				  for (var i=0; i< drops.length; i++)
+				  {
+					var text=binary[Math.floor(Math.random()*binary.length)];
+					cx.fillText(text,i*font_size, drops[i]*font_size);
+					if(drops[i]*font_size > c.height && Math.random() > 0.975)
+					drops[i]=0;
+					drops[i]++;
+				  }
+			}
+			setInterval(draw,35);
+		</script>
+		<script src="js/my_script.js"></script>
+	</body>
+</html>

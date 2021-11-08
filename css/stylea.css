@@ -1,0 +1,89 @@
+body
+{
+	margin:0;
+	padding:0;
+	background-size:cover;
+	font-family:  sans-serif;
+	background-color: #1d1f20;
+	width:100%;
+	height:100%;
+}
+
+.logBox
+{
+		position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 341px;
+    height: 379px;
+    padding: 67px 30px;
+    box-sizing: border-box;
+    background: rgba(158, 158, 158, 0.81);
+    border-radius: 20%;
+	border: 5px solid #ffee1ee0;
+}
+
+h2
+{
+	margin: 0;
+    padding: 0 0 15px;
+    color: #ffee1ee0;
+    text-align: center;
+}
+
+.logBox p
+{
+	padding:0;
+	margin:0;
+	color:#FFF;
+	font-weight:bold;
+}
+
+.logBox input
+{
+	width:100%;
+	margin-bottom:20px;
+}
+
+.logBox input[type='text'], .logBox input[type='password']
+{
+	border: none;
+    border-bottom: 1px solid #FFF;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.logBox input[type='submit']
+{
+	border:none;
+	outline:none;
+	height:40px;
+	color:#FFF;
+	font-size:16px;
+	background:#ffee1ee0;
+	cursor:pointer;
+	border-radius:20px;
+}
+
+.logBox input[type='submit']:hover
+{
+	background:#efed40;
+	color:#262626;
+}
+
+::placeholder
+{
+	color:rgba(255,255,255,0.5);
+}
+
+ a{
+	 color:#DDD;
+ }
+canvas{
+	display:block;
+}
